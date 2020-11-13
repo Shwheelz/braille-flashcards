@@ -1,0 +1,12 @@
+<div class="card">
+  <div *ngIf="isFront">
+    {{ currentLetter.brailleUnicodeCharacter }}
+  </div>
+
+  <div *ngIf="!isFront">
+    {{ currentLetter.englishLetter.toUpperCase() }}
+  </div>
+</div>
+
+<button (click)="flipCard()" class="btn-flip">Flip Card</button>
+<button (click)="drawCard()" class="btn-draw">Draw New Card</button>
