@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { brailleAlphabet } from '../data/braille-alphabet';
 import BrailleLetter from '../braille-letter';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-flashcard',
@@ -8,6 +9,9 @@ import BrailleLetter from '../braille-letter';
   styleUrls: ['./flashcard.component.scss']
 })
 export class FlashcardComponent implements OnInit {
+
+  @Input()
+  public type: string;
 
   public currentLetter: BrailleLetter;
   public isFront: boolean;
@@ -30,6 +34,11 @@ export class FlashcardComponent implements OnInit {
   public drawCard() {
     this.isFront = true;
     this.currentLetter = this.getRandomLetter();
+  }
+
+  public submitAnswer() {
+    this.flipCard();
+    
   }
 
 }

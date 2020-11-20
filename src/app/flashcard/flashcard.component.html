@@ -8,5 +8,14 @@
   </div>
 </div>
 
-<button (click)="flipCard()" class="btn-flip">Flip Card</button>
-<button (click)="drawCard()" class="btn-draw">Draw New Card</button>
+<div *ngIf="type === 'practice'">
+  <button (click)="flipCard()" class="btn-flip">Flip Card</button>
+  <button (click)="drawCard()" class="btn-draw">Draw New Card</button>
+</div>
+
+<div *ngIf="type === 'quiz'">
+  <form>
+    <input class="answer" type="text" #answer>
+    <button (click)="submitAnswer()">Submit</button>
+  </form>
+</div>

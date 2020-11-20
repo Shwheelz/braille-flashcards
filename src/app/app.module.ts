@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FlashcardComponent } from './flashcard/flashcard.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { QuizComponent } from './quiz/quiz.component';
+import { PracticeComponent } from './practice/practice.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FlashcardComponent,
-    NavbarComponent
+    NavbarComponent,
+    QuizComponent,
+    PracticeComponent
   ],
   imports: [
     BrowserModule,
