@@ -28,6 +28,7 @@ export class FlashcardComponent implements OnInit {
   }
 
   public drawCard() {
+    this.isFront = true;
     this.currentLetter = this.getRandomLetter();
   }
 
